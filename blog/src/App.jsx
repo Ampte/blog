@@ -4,6 +4,7 @@ import './App.css'
 import Header from './components/header'
 import Home from './pages/home';
 import Footer from './components/footer';
+import Contact from './components/contact';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
       </Routes>
+      <Contact/>
       <Footer/>
     </HashRouter>
     </>
