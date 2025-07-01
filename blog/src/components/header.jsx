@@ -6,7 +6,7 @@ const Header = () => {
         <>
         <div className='header'>
             <h1 className='name'>Ampte B Marak</h1>
-            <p>Welcom to the blog of <strong>Ampte B Marak</strong></p>
+            <p>Welcome to the blog of <strong>Ampte B Marak</strong></p>
         </div>
         </>
     );
