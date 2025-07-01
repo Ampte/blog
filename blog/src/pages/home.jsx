@@ -59,6 +59,7 @@ const Home = () => {
                 <h2>Let's Learn Together.</h2>
                 <p>This blog is my journey — and I want it to be yours too. I’ll be posting tutorials, tips, and beginner-friendly lessons regularly. And I’d love for you to follow along, ask questions, or even share your wins with me.</p>
                 <p>Thanks for stopping by, and welcome to your web development journey.</p>
+                <button className='start'>Stay tune</button>
             </div>
         </div>
         </>
