@@ -4,8 +4,11 @@ import ampte from '/src/assets/AMPTE2.jpeg'
 import lesson from '/src/assets/LESSON.jpg'
 import dull from '/src/assets/DULL.webp'
 import learn from '/src/assets/LEARN.webp'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+
+    const navigate = useNavigate();
     return(
         <>
         <div className='home'>
@@ -44,7 +47,7 @@ const Home = () => {
             </div>
             <div className='dull'>
                 <img src={dull} alt='Black white Laptop.'/>
-                <h2>What Makes This Blog Diffrent?</h2>
+                <h2>What Makes This Blog Different?</h2>
                 <p>I’m not a senior developer or a coding bootcamp instructor. I’m a learner — just a little further down the path. That means I remember exactly what it’s like to be a beginner.</p>
                 <p>Here, you’ll find:</p>
                 <ul>
@@ -59,7 +62,7 @@ const Home = () => {
                 <h2>Let's Learn Together.</h2>
                 <p>This blog is my journey — and I want it to be yours too. I’ll be posting tutorials, tips, and beginner-friendly lessons regularly. And I’d love for you to follow along, ask questions, or even share your wins with me.</p>
                 <p>Thanks for stopping by, and welcome to your web development journey.</p>
-                <button className='start'>Stay tune</button>
+                <button className='start' onClick={() =>navigate('/html')}>Start Learning</button>
             </div>
         </div>
         </>

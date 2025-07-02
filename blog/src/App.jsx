@@ -5,6 +5,8 @@ import Header from './components/header'
 import Home from './pages/home';
 import Footer from './components/footer';
 import Contact from './components/contact';
+import HTMLBasics from './pages/html';
+import CSSBasics from './pages/css';
 
 function App() {
 
@@ -14,6 +16,8 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/html' element={<HTMLBasics/>}/>
+        <Route path='/css' element={<CSSBasics/>}/>
       </Routes>
       <Contact/>
       <Footer/>
