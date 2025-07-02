@@ -83,6 +83,9 @@ const HTMLBasics = () => {
       }}>
         <button className='next' onClick={() => navigate("/css")}>Next</button>
       </div>
+      <div className='go-back'>
+        <button className='back' onClick={() => window.history.back()}>Back</button>
+      </div>
     </div>
     </>
   );
