@@ -78,7 +78,7 @@ const HTMLBasics = () => {
         </ul>
         <p>Don't worry if it feels confusing at first. Like learning any new language, it gets easier with practice.</p>
       </section>
-      <div className='next' style={{
+      <div style={{
         textAlign: 'right'
       }}>
         <button className='next' onClick={() => navigate("/css")}>Next</button>
