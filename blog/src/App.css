@@ -164,8 +164,17 @@ a{
 }
 
 
+.back{
+  background-color: yellow;
+  padding: 10px;
+  border: none;
+}
 
-
+.next{
+  background-color: yellow;
+  padding: 10px;
+  border: none;
+}
 
 @media(min-width:1000px){
   
