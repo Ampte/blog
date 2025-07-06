@@ -1,13 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Contact = () => {
+
+    const [email, setEmail] = useState('');
+
+    const handleChange = (e) =>{
+        setEmail(e.target.value);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        fetch("https://chola-bara-server.onrender.com/api/email", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({email})
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            alert(data.response);
+        })
+        .catch((error) => {
+            alert(error);
+        });
+    };
+
     return(
         <>
         <div className='contact'>
             <div className='subscribe'>
                 <h2 style={{backgroundColor: 'black', color: 'white', padding: '10px'}}>Subscribe</h2>
-                <form>
-                    <input type='email' className='enter-email' placeholder='Email'required/>
+                <form onSubmit={handleSubmit}>
+                    <input type='email' name='email' onChange={handleChange} className='enter-email' placeholder='Email'required/>
                     <button type='submit' className='subscribe-btn'>Subscribe</button>
                 </form>
             </div>
