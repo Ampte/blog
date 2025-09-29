@@ -12,7 +12,7 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch("https://chola-bara-server.onrender.com/api/email", {
+        fetch("https://blog-server.onrender.com/api/add-subscribers", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -21,7 +21,7 @@ const Contact = () => {
         })
         .then((response) => response.json())
         .then((data) => {
-            if(data){
+            if(data.subscribe){
                 setSubscribe(true);
             }
         })
