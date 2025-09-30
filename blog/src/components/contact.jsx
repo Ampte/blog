@@ -12,7 +12,7 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch("https://blog-server.onrender.com/api/add-subscribers", {
+        fetch("https://blog-server-f56g.onrender.com/api/add-subscribers", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
