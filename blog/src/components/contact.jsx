@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 const Contact = () => {
 
     const [email, setEmail] = useState('');
-    const [subscribe, setSubscribe] = useState(false);
 
     const handleChange = (e) =>{
         setEmail(e.target.value);
@@ -22,8 +21,10 @@ const Contact = () => {
         .then((response) => response.json())
         .then((data) => {
             if(data.subscribe){
-                setSubscribe(true);
-            }
+                alert(data.message);
+            }else{
+                alert(data.message);
+            };
         })
         .catch((error) => {
             console.log("Something went wrong!", error);
@@ -38,7 +39,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit}>
                     <input type='email' name='email' onChange={handleChange} className='enter-email' placeholder='Email'required/>
                     <button type='submit' className='subscribe-btn'>
-                        {subscribe ? <span>You have subscribed</span> : <span>Click to subscribe</span>}
+                        Click to subscribe
                     </button>
                 </form>
             </div>
