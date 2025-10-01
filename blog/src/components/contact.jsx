@@ -22,12 +22,10 @@ const Contact = () => {
         .then((data) => {
             if(data.subscribe){
                 alert(data.message);
-            }else{
-                alert(data.message);
             };
         })
         .catch((error) => {
-            console.log("Something went wrong!", error);
+            console.log("Subscribtion failed!");
         });
     };
 
